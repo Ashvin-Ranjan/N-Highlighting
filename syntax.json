@@ -1,0 +1,35 @@
+{
+	"scopeName": "source.n",
+	"fileTypes": ["n"],
+	"patterns": [
+		{
+			"include": "#interpolation"
+		},
+		{
+			"include": "#keyword"
+		},
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"name": "keyword.control.n",
+			"match": "\\b(if|else|in|for|return)\\b"
+		},
+		{
+			"name": "string.quoted.double.n",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": {
+				"name": "contant.character.escaped.n",
+				"match": "\\\\."
+			}
+		},
+		{
+			"name": "contant.character.escaped.n",
+			"match": "\\\\{?.}?"
+		}
+	]
+}
